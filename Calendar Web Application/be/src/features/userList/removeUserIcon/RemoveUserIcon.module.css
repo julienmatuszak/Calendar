@@ -1,0 +1,15 @@
+.remove_user_dialog {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 112px;
+  letter-spacing: -1.5px;
+  padding: 10px;
+}
+
+.remove_user_dialog__error_message {
+  align-self: center;
+  margin-bottom: 6px;
+  color: red;
+}

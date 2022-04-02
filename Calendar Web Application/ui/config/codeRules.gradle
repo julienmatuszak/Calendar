@@ -1,0 +1,28 @@
+pmd {
+    reportsDir = file("$project.buildDir/reports/pmd")
+    ruleSetFiles = files("config/pmd-ruleSet.xml")
+    ruleSets = []
+}
+
+checkstyle {
+    configFile file("config/checkstyle.xml")
+}
+
+checkstyleMain {
+    source ="src/main/java"
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            element = 'BUNDLE'
+            excludes
+            limit {
+                minimum = 0.2
+            }
+        }
+    }
+}
+
+check.dependsOn(jacocoTestCoverageVerification)
+test.finalizedBy jacocoTestReport

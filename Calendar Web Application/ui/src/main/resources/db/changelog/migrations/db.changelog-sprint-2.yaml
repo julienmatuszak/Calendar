@@ -1,0 +1,241 @@
+databaseChangeLog:
+  - changeSet:
+      id: extra-users
+      author: Julius Raskevicius
+      comment: test data
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: user_name
+                  value: Phineas Gage
+              - column:
+                  name: email
+                  value: phineas@gage.com
+              - column:
+                  name: password_hash
+                  value: $2b$15$FL7UqMH96Vky6cLjyqP9TezM6UPr2E3D8.2xPMiciCM98QkKagEWW
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: user_name
+                  value: Little Albert
+              - column:
+                  name: email
+                  value: little@albert.com
+              - column:
+                  name: password_hash
+                  value: $2b$15$FL7UqMH96Vky6cLjyqP9TezM6UPr2E3D8.2xPMiciCM98QkKagEWW
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: user_name
+                  value: Ivan Pavlov
+              - column:
+                  name: email
+                  value: ivan@pavlov.com
+              - column:
+                  name: password_hash
+                  value: $2b$15$FL7UqMH96Vky6cLjyqP9TezM6UPr2E3D8.2xPMiciCM98QkKagEWW
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: user_name
+                  value: Ronald Mc'Donald
+              - column:
+                  name: email
+                  value: ronald@mcdonald.com
+              - column:
+                  name: password_hash
+                  value: $2b$15$FL7UqMH96Vky6cLjyqP9TezM6UPr2E3D8.2xPMiciCM98QkKagEWW
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: user_name
+                  value: Heikki Salmela
+              - column:
+                  name: email
+                  value: heikki@salmela.com
+              - column:
+                  name: password_hash
+                  value: $2b$15$FL7UqMH96Vky6cLjyqP9TezM6UPr2E3D8.2xPMiciCM98QkKagEWW
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: user_name
+                  value: David Edgerton
+              - column:
+                  name: email
+                  value: david@Edgerton.com
+              - column:
+                  name: password_hash
+                  value: $2b$15$FL7UqMH96Vky6cLjyqP9TezM6UPr2E3D8.2xPMiciCM98QkKagEWW
+  - changeSet:
+      id: teams-table
+      author: Julius Raskevicius
+      comment: table to store teams
+      changes:
+        - createTable:
+            tableName: team
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: team_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+                    unique: true
+  - changeSet:
+      id: initial-teams
+      author: Julius Raskevicius
+      comment: test data
+      changes:
+        - insert:
+            tableName: team
+            columns:
+              - column:
+                  name: team_name
+                  value: Team Lorem Ipsum
+        - insert:
+            tableName: team
+            columns:
+              - column:
+                  name: team_name
+                  value: Team Psychology
+  - changeSet:
+      id: team_users-table
+      author: Julius Raskevicius
+      comment: join table to store team-user relationships
+      changes:
+        - createTable:
+            tableName: team_user
+            columns:
+              - column:
+                  name: team_id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    foreignKeyName: fk_team_user_team_id
+                    references: team(id)
+              - column:
+                  name: user_id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    unique: true
+                    nullable: false
+                    foreignKeyName: fk_team_user_user_id
+                    references: user(id)
+  - changeSet:
+      id: initial-team-users
+      author: Julius Raskevicius
+      comment: test data
+      changes:
+        - insert:
+            tableName: team_user
+            columns:
+              - column:
+                  name: team_id
+                  value: 1
+              - column:
+                  name: user_id
+                  value: 1
+        - insert:
+            tableName: team_user
+            columns:
+              - column:
+                  name: team_id
+                  value: 1
+              - column:
+                  name: user_id
+                  value: 2
+        - insert:
+            tableName: team_user
+            columns:
+              - column:
+                  name: team_id
+                  value: 1
+              - column:
+                  name: user_id
+                  value: 3
+        - insert:
+            tableName: team_user
+            columns:
+              - column:
+                  name: team_id
+                  value: 2
+              - column:
+                  name: user_id
+                  value: 4
+        - insert:
+            tableName: team_user
+            columns:
+              - column:
+                  name: team_id
+                  value: 2
+              - column:
+                  name: user_id
+                  value: 5
+        - insert:
+            tableName: team_user
+            columns:
+              - column:
+                  name: team_id
+                  value: 2
+              - column:
+                  name: user_id
+                  value: 6
+  - changeSet:
+      id: time-off-record-table
+      author: Dainius Gaizutis
+      comment: table to store time off records
+      changes:
+        - createTable:
+            tableName: time_off
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    referencedTableName: user
+                    referencedColumnNames: id
+                    foreignKeyName: fk_time_off_user_id
+              - column:
+                  name: time_off_type_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    referencedColumnNames: id
+                    referencedTableName: time_off_types
+                    foreignKeyName: fk_time_off_time_off_type_id
+              - column:
+                  name: start_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: end_date
+                  type: date
+                  constraints:
+                    nullable: false

@@ -1,0 +1,80 @@
+.team-list {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 608px;
+}
+
+.team-list__table {
+  position: absolute;
+  width: 100%;
+  /*border: 1px solid rgba(33, 33, 33, 0.08);*/
+}
+
+.team-list__table th {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), #c2c9d1;
+
+  position: relative;
+  font-family: Open Sans, Serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+
+  height: 48px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.team-list__table-row td {
+  position: relative;
+  height: 16px;
+  top: calc(50% - 16px / 2);
+
+  font-family: Open Sans, Serif;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+
+  height: 48px;
+}
+
+.team-list__add-team-button-container {
+  margin-bottom: 20px;
+}
+
+.add-team-form__user-selection-container {
+  width: 543px;
+  margin-top: 8px;
+}
+
+.add-team-form__user-selection-container-error {
+  width: 100%;
+  color: #d32f2f;
+  margin-left: 6px;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+  text-align: left;
+  margin-top: 3px;
+  margin-right: 14px;
+  margin-bottom: 0;
+  margin-left: 14px;
+}
+
+.add-team-form__user-selection-container * {
+  font-family: Roboto;
+}
+
+.add-team-form__user-selection-container .chip {
+  background-color: #404cfa;
+}
+
+.add-team-form__user-selection-container li:hover {
+  background-color: #404cfa;
+}
+
+.Toastify {
+  --toastify-z-index: 3;
+}

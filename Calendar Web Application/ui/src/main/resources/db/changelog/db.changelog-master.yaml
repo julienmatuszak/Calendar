@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/migrations/db.changelog-sprint-0.yaml
+  - include:
+      file: db/changelog/migrations/db.changelog-sprint-1.yaml
+  - include:
+      file: db/changelog/migrations/db.changelog-sprint-2.yaml
+  - include:
+      file: db/changelog/migrations/db.changelog-sprint-3.yaml

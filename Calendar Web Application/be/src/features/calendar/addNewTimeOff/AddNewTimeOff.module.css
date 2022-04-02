@@ -1,0 +1,42 @@
+.add_new_time_off__page_center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: black;
+}
+
+.add_new_time_off__page_center * {
+  margin-top: 8px;
+}
+
+.add_new_time_off__ranges_layout {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.add_new_time_off__flex_end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+div .add_new_time_off__to_separation {
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: center;
+}
+
+div .add_new_time_off__error_message {
+  color: red;
+  display: flex;
+  justify-content: center;
+}

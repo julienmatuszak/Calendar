@@ -1,0 +1,35 @@
+.accordion_summary {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.accordion_summary__text-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+}
+
+.plus {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(#404cfa, #404cfa), linear-gradient(#404cfa, #404cfa);
+  background-position: center;
+  background-size: 100% 2.5px, 2.5px 100%;
+  /*thickness = 2px, length = 50% (25px)*/
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.time_off_types__editable_name {
+  color: #404cfa;
+  font-weight: 600;
+}

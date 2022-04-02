@@ -1,0 +1,86 @@
+.label {
+  background: #ffffff;
+  height: fit-content;
+  border: 1px solid rgba(33, 33, 33, 0.08);
+  margin-top: 20px;
+}
+
+.label__title {
+  margin-left: 14px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.buttons {
+  border: 0.75px solid rgba(33, 33, 33, 0.08);
+  border-top: none;
+  border-bottom: none;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), #c2c9d1;
+  display: flex;
+  position: relative;
+  height: 20px;
+  justify-content: space-between;
+}
+
+.buttons__previous,
+.buttons__next {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 124px;
+  height: 32px;
+  z-index: 1;
+  position: relative;
+  margin-left: 150px;
+  top: 10px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  color: #404cfa;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  padding: 6px 6px 6px 8px;
+}
+
+.buttons__previousIcon,
+.buttons__nextIcon {
+  height: 16px;
+}
+
+.buttons__previousText,
+.buttons__nextText {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #404cfa;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 10px;
+}
+
+.buttons__previousIcon + .buttons__previousText,
+.buttons__nextText + .buttons__nextIcon {
+  margin-left: 16px;
+}
+
+.calendar__outer {
+  max-width: calc(100% - 50px);
+  margin-bottom: 40px;
+}

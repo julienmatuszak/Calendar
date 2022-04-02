@@ -1,0 +1,111 @@
+databaseChangeLog:
+  - changeSet:
+      id: time-off-types-table
+      author: Laura Nesvat
+      comment: table to store possible time off types
+      changes:
+        - createTable:
+            tableName: time_off_types
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: color
+                  type: varchar(6)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 1
+      author: Laura Nesvat
+      comment: test data
+      changes:
+        - insert:
+            tableName: time_off_types
+            columns:
+              - column:
+                  name: name
+                  value: Education/SLD
+              - column:
+                  name: color
+                  value: 1AC889
+  - changeSet:
+      id: users-table
+      author: Julius Raskevicius
+      comment: table to store users and passwords
+      changes:
+        - createTable:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(254)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password_hash
+                  type: varchar(254)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: initial-users
+      author: Julius Raskevicius
+      comment: test data
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: user_name
+                  value: Matt Brook
+              - column:
+                  name: email
+                  value: mattbrook@gmail.com
+              - column:
+                  name: password_hash
+                  value: $2b$15$FL7UqMH96Vky6cLjyqP9TezM6UPr2E3D8.2xPMiciCM98QkKagEWW
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: user_name
+                  value: Conel McLane
+              - column:
+                  name: email
+                  value: conelmclane@gmail.com
+              - column:
+                  name: password_hash
+                  value: $2b$15$FL7UqMH96Vky6cLjyqP9TezM6UPr2E3D8.2xPMiciCM98QkKagEWW
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: user_name
+                  value: John Smith
+              - column:
+                  name: email
+                  value: johnsmith@gmail.com
+              - column:
+                  name: password_hash
+                  value: $2b$15$FL7UqMH96Vky6cLjyqP9TezM6UPr2E3D8.2xPMiciCM98QkKagEWW

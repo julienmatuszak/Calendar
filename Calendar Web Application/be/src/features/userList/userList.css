@@ -1,0 +1,40 @@
+.user-list {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 608px;
+}
+
+.user-list__table {
+  position: absolute;
+  width: 100%;
+  /*border: 1px solid rgba(33, 33, 33, 0.08);*/
+}
+
+.user-list__table th {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), #c2c9d1;
+  position: relative;
+  font-family: Open Sans, Serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  height: 48px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.user-list__table-row td {
+  position: relative;
+  height: 16px;
+  top: calc(50% - 16px / 2);
+  font-family: Open Sans, Serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  height: 48px;
+}
+
+.user-list__add-user-button-container {
+  margin-bottom: 20px;
+}

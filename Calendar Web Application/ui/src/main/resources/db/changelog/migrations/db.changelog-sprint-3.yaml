@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: make-emails-unique
+      author: Julius Raskevicius
+      changes:
+        - addUniqueConstraint:
+            columnNames: email
+            tableName: user
+  - changeSet:
+      id: make-time-off-type-name-unique
+      author: Dainius Gaizutis
+      changes:
+        - addUniqueConstraint:
+            tableName: time_off_types
+            columnNames: name

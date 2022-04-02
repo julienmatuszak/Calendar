@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40" height="41" fill="none" version="1.1" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(-10,-9.5)">
+<path d="m10 29.5c0-11.046 8.9543-20 20-20s20 8.9543 20 20-8.9543 20-20 20-20-8.9543-20-20z" fill="#404cfa"/>
+<path d="m37 30.5h-6v6h-2v-6h-6v-2h6v-6h2v6h6z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd"/>
+</g>
+</svg>

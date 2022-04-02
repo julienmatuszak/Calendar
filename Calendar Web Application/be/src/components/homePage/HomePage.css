@@ -1,0 +1,15 @@
+.home_page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 10px 10px 10px 30px;
+}
+
+.time_off_types {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-items: stretch;
+  width: 600px;
+}
